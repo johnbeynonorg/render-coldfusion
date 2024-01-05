@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: jb-coldfusion
+    runtime: docker
+    plan: standard
+    numInstances: 1
+    healthCheckPath: /healthcheck.cfm
+    envVars:
+      - key: PORT
+        value: 8500
